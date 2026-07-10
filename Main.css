@@ -1,0 +1,157 @@
+:root {
+  --primary: #3b82f6;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+}
+
+/* LIGHT MODE */
+.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+}
+
+/* BASE */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 1rem;
+}
+
+/* BACKGROUND */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: url("BgPhotos/bg.jpg") center/cover no-repeat;
+  filter: blur(10px) brightness(0.4);
+  transform: scale(1.1);
+  transition: 0.5s ease;
+  z-index: 0;
+}
+
+.hero:hover::before {
+  filter: blur(3px) brightness(0.7);
+}
+
+/* HERO LAYOUT */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* TEXT */
+.hero-text {
+  text-align: center;
+}
+
+.hero h1,
+.hero p {
+  color: white;
+  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+/* LOGOS */
+.hero-img {
+  width: 95px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: 0.2s;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* THEME BUTTON */
+#themeToggle {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 1.4rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+#themeToggle:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* SECTIONS */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+}
