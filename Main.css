@@ -17,7 +17,7 @@
 /* BASE */
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: 0.3s;
@@ -154,4 +154,102 @@ footer {
   text-align: center;
   padding: 2rem;
   color: var(--muted);
+}
+
+
+/* GRAD PIC*/
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: -20px;
+}
+
+.grad-pic {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+
+.grad-pic:hover {
+  transform: scale(1.05);
+}
+
+
+/* TEXT WIDTH IN ABOUT*/
+.about-text {
+  max-width: 600px;
+}
+
+
+/* ROW STUFF */
+
+.info-row {
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  gap: 30px;
+  margin: 60px auto;
+  max-width: 900px;          
+  flex-wrap: wrap;
+}
+
+/* ROW BOXES */
+.info-box {
+  width: 300px;               /* slightly bigger */
+  min-height: 300px;         
+  padding: 20px;
+
+  background: var(--card);    /* FIX: works in both themes */
+  border: 1px solid #334155;  /* FIX: visible in light mode */
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;    
+  align-items: center;       
+  justify-content: flex-start;   
+
+  text-align: center;       
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+/* HOVER */
+.info-box:hover {
+  transform: none; 
+  border-color: var(--primary);
+}
+
+/* TITLE SPACING */
+.info-box h3 {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  color: var(--text); 
+}
+
+/* FONT SIZE */
+.info-box p {
+  font-size: 14px;
+  color: var(--muted); 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: centre;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  line-height: 1.5;   
+  margin: 8px 0;
+  max-width: 240px;      
+}
+
+}
+
+/* PREVENT OVERFLOW */
+.info-box {
+  overflow: visible;
+  height: auto;
 }
