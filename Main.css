@@ -64,7 +64,7 @@ body {
 .hero h1,
 .hero p {
   color: white;
-  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+
 }
 
 /* LOGOS */
@@ -112,7 +112,7 @@ nav {
 nav a {
   color: var(--text);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* SECTIONS */
@@ -160,14 +160,14 @@ footer {
 /* GRAD PIC*/
 .about-container {
   display: flex;
-  align-items: flex-start;
+  align-items: flex;
   gap: 30px;
-  margin-top: -20px;
+  margin-top: 40px;
 }
 
 .grad-pic {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid white;
@@ -186,6 +186,14 @@ footer {
 }
 
 
+/* TEXT */
+h2, h3 {
+  color: var(--text);
+}
+#contact p {
+  color: var(--text);
+}
+
 /* ROW STUFF */
 
 .info-row {
@@ -200,12 +208,12 @@ footer {
 
 /* ROW BOXES */
 .info-box {
-  width: 300px;               /* slightly bigger */
+  width: 300px;              
   min-height: 300px;         
   padding: 20px;
 
-  background: var(--card);    /* FIX: works in both themes */
-  border: 1px solid #334155;  /* FIX: visible in light mode */
+  background: var(--card);    
+  border: 1px solid #334155;  
   border-radius: 12px;
 
   display: flex;
@@ -219,11 +227,21 @@ footer {
   transition: 0.2s;
 }
 
+
+
+
+
 /* HOVER */
 .info-box:hover {
   transform: none; 
-  border-color: var(--primary);
+  border-color: rgba(255,255,255,0.2);
 }
+
+
+
+
+
+
 
 /* TITLE SPACING */
 .info-box h3 {
@@ -231,6 +249,10 @@ footer {
   margin-top: 5px;
   color: var(--text); 
 }
+
+
+
+
 
 /* FONT SIZE */
 .info-box p {
@@ -246,10 +268,100 @@ footer {
   max-width: 240px;      
 }
 
+
+
+
+
+
+
 }
 
 /* PREVENT OVERFLOW */
 .info-box {
   overflow: visible;
   height: auto;
+}
+
+
+
+
+
+
+/* BIGGER BOX */
+.main-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+
+  /* ✨ NEW glass + image */
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)),
+    url("BgPhotos/inside-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  /* ✨ BLUE GLOW */
+  box-shadow:
+    0 0 40px rgba(147, 197, 253, 0.25),
+    0 0 80px rgba(147, 197, 253, 0.45);
+}
+.light nav a,
+.light #projects h2,
+.light #contact h2,
+.light #contact p {
+  color: #ffffff;
+}
+.light nav {
+  border-bottom: 1px solid #ffffff;
+}
+
+
+
+
+
+
+/* SPLASH SCREEN */
+/* SPLASH SCREEN */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: #0f172a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+
+  transition: opacity 0.8s ease;
+}
+
+/* LOGO */
+#splash img {
+  width: 300px;
+  opacity: 0;
+  animation: logoIntro 2s ease forwards;
+}
+
+/* ANIMATION */
+@keyframes logoIntro {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
