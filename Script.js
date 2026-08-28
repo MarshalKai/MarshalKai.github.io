@@ -1,4 +1,4 @@
-// ✅ SPLASH SCREEN (RUNS ON LOAD)
+
 window.onload = function () {
   const splash = document.getElementById("splash");
 
@@ -13,7 +13,7 @@ window.onload = function () {
 };
 
 
-// ✅ THEME TOGGLE
+
 const toggleBtn = document.getElementById("themeToggle");
 
 toggleBtn.addEventListener("click", () => {
@@ -27,7 +27,7 @@ toggleBtn.addEventListener("click", () => {
 });
 
 
-// ✅ IMAGE VIEWER
+
 const images = document.querySelectorAll(".gallery img");
 
 images.forEach(img => {
@@ -46,3 +46,4 @@ images.forEach(img => {
     });
   });
 });
+
