@@ -341,3 +341,18 @@ h1, h2, h3, h4, h5, h6, p {
 .canva-card iframe {
   border-radius: 8px;
 }
+
+
+
+.project-link {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--primary);
+  color: white !important;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  opacity: 0.85;
+}
